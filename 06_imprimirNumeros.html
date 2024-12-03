@@ -6,11 +6,26 @@
     */
 
     //ENTRADA
-
-    
+    let numUm = 0;
+    let numDois = 0;
+    do{
+        numUm = Number(prompt(`Informe o número inicial`));
+        numDois = Number(prompt(`Informe o número final`));
+        if(numUm > numDois){
+            alert(`ERRO \n O valor inicial deve ser menor que valor final`)
+        }
+    }while(numUm > numDois)
     //PROCESSAMENTO
-
+    let impares = [];
+    let pares = [];
+    for(contador = numUm; contador <= numDois; contador++){
+        if(contador % 2 === 0){
+            pares.push(contador);
+        } else {
+            impares.push(contador);
+        }
+    }
     
     //SAÍDA
-
+    document.write(`Numeros pares entre ${numUm} e ${numDois}: ${pares.join(", ")} <br> Numeros ímpares entre ${numUm} e ${numDois}: ${impares.join(", ")}`)
 </script>

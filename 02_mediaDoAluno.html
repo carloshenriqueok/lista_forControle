@@ -7,11 +7,15 @@
     */
 
     //ENTRADA
-    
-
+    let qntdNotas = Number(prompt(`Informe a quantidade de notas obtidas pelo aluno`));
+    let soma = 0;
     //PROCESSAMENTO
-    
-
+    for(contandor = 1; contandor <= qntdNotas; contandor++){
+        notas = Number(prompt(`Informe a nota:`));
+        soma = soma + notas
+    }
+    const media = soma / qntdNotas;
+    document.write(`Média das notas: ${media.toFixed(2)}`);
     //SAÍDA
 
 </script>

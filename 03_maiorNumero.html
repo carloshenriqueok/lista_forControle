@@ -7,11 +7,18 @@
     */
 
     //ENTRADA
+    let numeros = [];
 
-    
     //PROCESSAMENTO
-
-    
+    for(contador = 1; contador <=5; contador++){
+        numero = Number(prompt(`Informe um número`));
+        numeros.push(numero);
+    }
+    //maiorNum = Math.max.apply(null, numeros);
+    alert(numeros);
+    numeros.sort((a, b) => b - a);
+    alert(numeros);
+    const maiorNum = numeros[0];
     //SAÍDA
-
-</script>
+    alert(`Maior número apresentado: ${maiorNum}`);
+</script>   
