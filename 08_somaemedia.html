@@ -6,11 +6,13 @@
     */
 
     //ENTRADA
-
-
+    let soma = 0;
     //PROCESSAMENTO
-
-
+    for(contador = 1; contador <= 5; contador++){
+        numero = Number(prompt(`Informe um número:`))
+        soma = soma + numero;
+    }
+    const media = soma / 5;
     //SAÍDA
-
+    document.write(`A média dos números é de `, media);
 </script>
