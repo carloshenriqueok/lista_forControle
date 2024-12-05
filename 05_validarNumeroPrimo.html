@@ -6,11 +6,23 @@
     */
 
     //ENTRADA
-    
-
+    const numero = Number(prompt(`Informe um número`));
+    let divisivel = 0;
+    let mensagem = "";
     //PROCESSAMENTO
+    for(contador = 1; contador <= numero; contador++ ){
+        if(numero % contador === 0){
+            divisivel++
+        }
+    }
 
+    if(divisivel === 2){
+       mensagem = "é primo";
+    }
+    else if(divisivel > 2){
+       mensagem = "não é primo";
+    }
 
     //SAÍDA
-
+    document.write(`O número ${numero} `, mensagem);
 </script>
