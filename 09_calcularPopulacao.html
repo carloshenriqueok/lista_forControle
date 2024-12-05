@@ -6,11 +6,20 @@
     */
 
     //ENTRADA
-
-    
+    let habitantes = 50000;
+    let habitantesCinco = 0;
+    let habitantesDez = 0;
     //PROCESSAMENTO
-    
+    for(contador = 1; contador <= 10; contador++){
+        habitantes *= 1.015;
+        if(contador === 5){
+            habitantesCinco = habitantes;
+        } 
+        if(contador === 10){
+            habitantesDez = habitantes;
+        }
+    }    
 
     //SAÍDA
-
+    document.write(`O número de habitantes previstos para a cidade em 5 anos é de ${habitantesCinco.toFixed(0)} habitantes <br> O número de habitantes previstos para a cidade em 10 anos é de ${habitantesDez.toFixed(0)} habitantes `)
 </script>

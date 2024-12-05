@@ -13,6 +13,34 @@
     const candidatoTres = prompt(`Qual o terceiro candidato a representante?`);
     const alunos = Number(prompt(`Qual a quantidade de alunos votantes?`));
     //PROCESSAMENTO
+    let votoUm = 0;
+    let votoDois = 0;
+    let votoTres = 0;
+    for(contador = 1; contador <= alunos; contador++){
+    let voto;
+        do{
+            voto = prompt(`Em quem você deseja votar? (${candidatoUm}, ${candidatoDois} ou ${candidatoTres})`);
+            if(voto != candidatoUm && voto!= candidatoDois && voto != candidatoTres){
+                alert(`ERRO \n Canditato inválido, o nome deve ser exatamente igual`);
+            }
+        }while(voto != candidatoUm && voto!= candidatoDois && voto != candidatoTres);
+        if(voto === candidatoUm){
+            votoUm++;
+    
+        }
+        else if(voto === candidatoDois){
+            votoDois++;
+        }
+        else{
+            votoTres++;
+        }
+    }
+    const porcenUm = ((votoUm / alunos) * 100).toFixed(2);
+    const porcenDois = ((votoDois / alunos) * 100).toFixed(2);
+    const porcenTres = ((votoTres / alunos) * 100).toFixed(2);
     //SAÍDA
-
+    document.write(`Resultado da votação: <br>`);
+    document.write(`${candidatoUm}: ${porcenUm}% (${votoUm} votos) <br>`);
+    document.write(`${candidatoDois}: ${porcenDois}% (${votoDois} votos) <br>`);
+    document.write(`${candidatoTres}: ${porcenTres}% (${votoTres} votos)`);
 </script>
