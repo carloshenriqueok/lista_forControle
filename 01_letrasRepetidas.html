@@ -11,9 +11,14 @@
 
     //ENTRADA
     let listaDeLetras = ["a", "b", "d", "e", "E", "F", "C", "U", "u", "e", "W", "D"];
-    let letra 
+    let letras = [];
     //PROCESSAMENTO
-    
+    for(letra of listaDeLetras){
+        if(letra === letra.toLowerCase() && !letras.includes(letra)){
+            letras.push(letra);
+        }
+    }
+    letras.sort()
     //SAÍDA
-
+    alert(letras.join(", "));
 </script>
